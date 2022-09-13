@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .cor {
+        background-color: rgb(175, 174, 174);
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .botao:hover {
+            background-color: black;
+            color: aqua;
+            
+            margin-right: #bbb;
+            height: 40px;
+            padding: o 20px;
+            font-weight: bold;
+            border: solid 5px #000;
+        }
+    </style>
+
+<title>
+    Títilo da Página Olá!
+</title>
+</head>
+<body class="cor"><center>
+    <h1>Digite Nome</h1>
+       <input id="nome">
+       <h1>Digite Um Número N1</h1>
+       <input id="n1" type="number">
+       <h1>Digite Um Número N2</h1>
+       <input id="n2" >
+       <h1>Digite Um Número N3</h1>
+       <input id="n3" >
+       <h1>Digite Um Número N4</h1>
+       <input id="n4" ><br> <br> <br>
+       <button class="botao" onclick="aparecer()">Calcular média</button>
+       <button class="botao" id="bot">Vai Aparecer Aqui</button>
+    </center>
+       <script>
+        var nome = document.querySelector('#nome')
+        var n1 = document.querySelector('#n1')
+        var n2 = document.querySelector('#n2')
+        var n3 = document.querySelector('#n3')
+        var n4 = document.querySelector('#n4')
+        var resultado = document.querySelector('#bot')
+  function aparecer(){
+      media = (parseInt(n1.value) + parseInt(n2.value) + 
+      parseInt(n3.value) + parseInt(n4.value)) / 4 
+      if(media<6){
+        resultado.innerHTML ="O Resultado Reprovado " + media
+      } else{
+          resultado.innerHTML ="O Resultado Aprovado " + media
+    }
+      
+    }       
+        </script>
+</body>
+</html>
