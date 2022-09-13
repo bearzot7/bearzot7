@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <style>
+      .cor {
+      background-color: rgb(175, 174, 174);
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+      .botao:hover {
+          background-color: black;
+          color: aqua;
+          
+          margin-right: #bbb;
+          height: 40px;
+          padding: o 20px;
+          font-weight: bold;
+          border: solid 5px #000;
+      }
+  </style>
+<title>
+    calculadora!
+</title>
+</head>
+<body class="cor"><center>
+       <h1>Digite Um Número N1</h1>
+       <input id="n1" type="number">
+       <h1>Digite Um Número N2</h1>
+       <input id="n2" >
+       <button class="botao" onclick="somar()">SOMAR</button>
+       <button class="botao" onclick="subtrair()">SUBTRAIR</button>
+       <button class="botao" id="bot">Vai Aparecer Aqui</button>
+    </center>
+       <script>
+        var n1 = document.querySelector('#n1')
+        var n2 = document.querySelector('#n2')
+        var resultado = document.querySelector('#bot')
+  function somar(){
+      resultado.innerHTML ="O Resultado é "
+       + parseFloat(n1.value)+
+      parseInt(n2.value)
+    }       
+    function subtrair(){
+      resultado.innerHTML ="O Resultado é "
+       + (parseFloat(n1.value)-
+      parseInt(n2.value))
+    } 
+        </script>
+</body>
+</html>
